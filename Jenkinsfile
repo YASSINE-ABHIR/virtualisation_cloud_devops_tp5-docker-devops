@@ -1,10 +1,10 @@
 pipeline {
     environment {
-        registry = "dev7hd/tp5_jenkins_pipeline"
+        registry = "yassine/tp5_jenkins_pipeline"
         registryCredential = 'docker_hub'
         dockerImage = ''
         dockerHost = 'tcp://127.0.0.1:2375'
-        DOCKER_USERNAME = 'dev7hd'
+        DOCKER_USERNAME = 'yassine'
     }
     agent any
     stages {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Cloning Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/Dev7HD/TP5_Jenkins_FreeStyle_Repo'
+                git branch: 'main', url: 'YASSINE-ABHIR/virtualisation_cloud_devops_tp5-docker-devops'
             }
         }
         stage('Building Image') {
